@@ -18,6 +18,10 @@
 
 		<a href="#main" class="skip-to-content-link visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'tenup-theme' ); ?></a>
 
-		<main id="main" role="main" tabindex="-1">
+		<header class="site-header">
+			header
+		</header>
 
-			<h1><?php bloginfo( 'name' ); ?></h1>
+		<main class="site-main" id="main" role="main" tabindex="-1">
+
+			<div class="entry-content">

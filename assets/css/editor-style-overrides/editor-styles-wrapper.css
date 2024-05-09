@@ -1,0 +1,8 @@
+.editor-styles-wrapper {
+
+	/* Triple classed to win specificity and allow use of mixins. */
+	& .is-root-container.is-layout-flow.wp-block-post-content {
+
+		@mixin entry-content;
+	}
+}

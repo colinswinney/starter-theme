@@ -14,15 +14,18 @@
  */
 @import url("modern-normalize/modern-normalize.css");
 
-/* Global - global pieces like media queries, mixins and placholders */
+/* Global - global pieces like media queries and placholders */
 @import url("global/index.css");
+
+/* Mixins */
+@import url("mixins/index.css");
 
 /* Base - base styles such as fonts, typography, and wordpress overrides */
 @import url("base/index.css");
 
 /* Layout - styles specific to layout */
 
-/* @import url("layout/index.css"); */
+@import url("layout/index.css");
 
 /* Templates */
 

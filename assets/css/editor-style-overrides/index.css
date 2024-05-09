@@ -1,0 +1,15 @@
+/**
+ * TenUpTheme: Editor style overrides
+ */
+
+/* Media Queries */
+@import url("../frontend/global/media-queries.css");
+
+/* Mixins */
+@import url("../frontend/mixins/index.css");
+
+/* Blocks */
+@import url("blocks/index.css");
+
+/* Editor Styles Wrapper */
+@import url("editor-styles-wrapper.css");

@@ -1,0 +1,50 @@
+@define-mixin entry-content {
+	container: entry-content / inline-size;
+	padding-inline: var(--wp--custom--content--gutter);
+
+	& > :where(*) {
+		margin: var(--block-margin-top, 0) auto var(--block-margin-bottom, var(--wp--custom--spacing--px--s));
+		max-width: var(--wp--custom--content--width--default);
+	}
+
+	& > :where(.alignleft) {
+
+		@mixin alignleft;
+	}
+
+	& > :where(.alignright) {
+
+		@mixin alignright;
+	}
+
+	& > :where(.aligncenter) {
+
+		@mixin aligncenter;
+	}
+
+	& > :where(.alignwide) {
+
+		@mixin alignwide;
+	}
+
+	& > :where(.alignfull) {
+
+		@mixin alignfull;
+	}
+
+	& :where(body .is-layout-flow) {
+
+		& > :first-child:first-child {
+			margin-block-start: var(--layout-flow-margin-start, 0);
+		}
+
+		& > :last-child:last-child {
+			margin-block-end: var(--layout-flow-margin-end, 0);
+		}
+
+		& > * {
+			margin-block-end: var(--layout-flow-margin-end, var(--wp--custom--spacing--px--s));
+			margin-block-start: var(--layout-flow-margin-start, 0);
+		}
+	}
+}

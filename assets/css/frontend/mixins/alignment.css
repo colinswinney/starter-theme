@@ -1,0 +1,50 @@
+body {
+	--float-max-w: calc(var(--wp--custom--content--width--default) / 3);
+	--float-margin: max(0px, calc((100% - var(--wp--custom--content--width--default)) / 2));
+}
+
+@define-mixin align-left-right-base {
+	float: none;
+	margin: 0 0 var(--wp--custom--spacing--px--s);
+
+	@media (--bp-medium) {
+		max-width: var(--float-max-w);
+	}
+}
+
+@define-mixin alignleft {
+
+	@mixin align-left-right-base;
+
+	@media (--bp-medium) {
+		float: left;
+		margin-left: var(--float-margin);
+	}
+}
+
+@define-mixin alignright {
+
+	@mixin align-left-right-base;
+
+	@media (--bp-medium) {
+		float: right;
+		margin-right: var(--float-margin);
+	}
+}
+
+@define-mixin aligncenter {
+	max-width: var(--wp--custom--content--width--center);
+}
+
+@define-mixin aligndefault {
+	max-width: var(--wp--custom--content--width--default);
+}
+
+@define-mixin alignwide {
+	max-width: var(--wp--custom--content--width--wide);
+}
+
+@define-mixin alignfull {
+	margin-inline: calc(var(--wp--custom--content--gutter) * -1);
+	max-width: none;
+}
